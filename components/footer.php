@@ -1,6 +1,6 @@
 <footer>
     <div class="footer-container-upper center">
-        <img src="<?= WROOT ?>img/logo.png" class="footer-logo" alt="Spectralis Logo">
+        <img src="/img/logo.png" class="footer-logo" alt="Spectralis Logo">
     </div>
     <div class="footer-container">
         <div class="container">
@@ -17,15 +17,15 @@
                 <div class="col-12 col-md-3 mobile-center">
                     <div class="footer-title">Useful links</div>
                     <ul>
-                        <li><a href="<?= WROOT ?>partners">Become a sponsor</a></li>
-                        <li><a href="<?= WROOT ?>merch">Merchandise</a></li>
+                        <li><a href="/partners">Become a sponsor</a></li>
+                        <li><a href="/merch">Merchandise</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-3 mobile-center">
                     <div class="footer-title">About site</div>
                     <ul>
-                        <li><a href="<?= WROOT ?>tos">Terms & conditions</a></li>
-                        <li><a href="<?= WROOT ?>pp">Privacy policy</a></li>
+                        <li><a href="/tos">Terms & conditions</a></li>
+                        <li><a href="/pp">Privacy policy</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-3 mobile-center">
@@ -33,7 +33,7 @@
                     <ul>
                         <li>Mail: <a href="mailto:<?= MAIL ?>"><?= MAIL ?></a></li>
                         <li>Discord: <a href="<?= DISCORD ?>">Spectralis Discord</a></li>
-                        <li>Contact form: <a href="<?= WROOT ?>contact">click here</a></li>
+                        <li>Contact form: <a href="/contact">click here</a></li>
                     </ul>
                 </div>
             </div>
@@ -44,3 +44,5 @@
         <a href="https://duplxey.com/"><small class="transparent">Programmed by Nik Tomazic (duplxey)</small></a>
     </div>
 </footer>
+</body>
+</html>

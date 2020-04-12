@@ -26,28 +26,19 @@ if($result['link']){
                     <li><i class="fas fa-trophy"></i><strong>Cup: </strong><?php echo $result['tournament']?></li>
                     <li><i class="fas fa-gamepad"></i><strong>Game: </strong><?php echo $result['game']?></li>
                     <li><i class="fas fa-star"></i><strong>Position: </strong><?php echo $result['placement']?></li>
+                    <li>
+                        <?php
+                        for($i=1;$i<=$result['players'];$i++){
+                            ?>
 
-                    <?php
-                    if($result["players"]=="1"){
-                     echo '
-                    
-                    <li><a href="' . WROOT . 'member?user=' . $result["nameLink"].'"><i class="fas fa-user fa-lg icon-link-special" style="font-size: 13px;"></i><span style="font-style: italic; color:#e0f107;">View '.$result["nameLink"].'</span></a><li>';}
-                    if($result["players"]=="2"){
-                    echo '
-                    
-                    <li><a href="' . WROOT . 'member?user=' . $result["nameLink"].'"><i class="fas fa-user fa-lg icon-link-special" style="font-size: 13px;"></i><span style="font-style: italic; color:#e0f107;">View '.$result["nameLink"].' </span></a> <a href="' . WROOT . 'member?user=' . $result["nameLink2"].'"><i class="fas fa-user fa-lg icon-link-special" style="font-size: 13px;"></i><span style="font-style: italic; color:#e0f107;">View '.$result["nameLink2"].' </span></a><li>';
-                    }
-                    if($result["players"]=="3"){
-                    echo '
-                    
-                    <li><a href="' . WROOT . 'member?user=' . $result["nameLink"].'"><i class="fas fa-user fa-lg icon-link-special" style="font-size: 13px;"></i><span style="font-style: italic; color:#e0f107;">View '.$result["nameLink"].' </span></a> <a href="' . WROOT . 'member?user=' . $result["nameLink2"].'"><i class="fas fa-user fa-lg icon-link-special" style="font-size: 13px;"></i><span style="font-style: italic; color:#e0f107;">View '.$result["nameLink2"].' </span></a>  <a href="' . WROOT . 'member?user=' . $result["nameLink3"].'"><i class="fas fa-user fa-lg icon-link-special" style="font-size: 13px;"></i><span style="font-style: italic; color:#e0f107;">View '.$result["nameLink3"].' </span></a><li>';    
-                    }
-                    if($result["players"]=="4"){
-                    echo '
-                    
-                    <li><a href="' . WROOT . 'member?user=' . $result["nameLink"].'"><i class="fas fa-user fa-lg icon-link-special" style="font-size: 13px;"></i><span style="font-style: italic; color:#e0f107;">View '.$result["nameLink"].' </span></a> <a href="' . WROOT . 'member?user=' . $result["nameLink2"].'"><i class="fas fa-user fa-lg icon-link-special" style="font-size: 13px;"></i><span style="font-style: italic; color:#e0f107;">View '.$result["nameLink2"].' </span></a>  <a href="' . WROOT . 'member?user=' . $result["nameLink3"].'"><i class="fas fa-user fa-lg icon-link-special" style="font-size: 13px;"></i><span style="font-style: italic; color:#e0f107;">View '.$result["nameLink4"].' </span></a>  <br><a href="' . WROOT . 'member?user=' . $result["nameLink4"].'"><i class="fas fa-user fa-lg icon-link-special" style="font-size: 13px;"></i><span style="font-style: italic; color:#e0f107;">View '.$result["nameLink3"].' </span></a><li>';    
-                    }
-                     ?>
+                                <a href="/member/<?=$result['nameLink'.$i]?>">
+                                    <i class="fas fa-user fa-lg icon-link-special" style="font-size: 13px;"></i><span style="font-style: italic; color:#e0f107;">View <?=$result['nameLink'.$i]?></span>
+                                </a>
+
+                            <?php
+                        }
+                        ?>
+                    </li>
                 </ul>
             </div>
         </div>
