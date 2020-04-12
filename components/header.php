@@ -21,6 +21,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/partners">Partners</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/reviews">Reviews</a>
+                    </li>
                     <!--<li class="nav-item">
                         <a class="nav-link" href="/support">Support us</a>
                     </li>-->

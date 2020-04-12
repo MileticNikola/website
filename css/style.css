@@ -264,3 +264,9 @@ Results
 .rndimg{
   border-radius:2%;
 }
+.review img{
+  margin-bottom: 15px;
+}
+.review .btn{
+  margin-top: 15px;
+}

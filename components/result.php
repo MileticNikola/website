@@ -30,11 +30,9 @@ if($result['link']){
                         <?php
                         for($i=1;$i<=$result['players'];$i++){
                             ?>
-
-                                <a href="/member/<?=$result['nameLink'.$i]?>">
-                                    <i class="fas fa-user fa-lg icon-link-special" style="font-size: 13px;"></i><span style="font-style: italic; color:#e0f107;">View <?=$result['nameLink'.$i]?></span>
-                                </a>
-
+                            <a href="/member/<?=$result['nameLink'.$i]?>">
+                                <i class="fas fa-user fa-lg icon-link-special" style="font-size: 13px;"></i><span style="font-style: italic; color:#e0f107;">View <?=$result['nameLink'.$i]?></span>
+                            </a>
                             <?php
                         }
                         ?>
