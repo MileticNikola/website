@@ -196,6 +196,7 @@ ul, ol {
 /*
 Results
  */
+ 
 .no-margin{
   margin-left: 0;
   margin-right: 0;
@@ -216,7 +217,7 @@ Results
   background: #626566;
 }
 .result-image{
-  height: 165px;
+  height: 100%;
 }
 .result-image img{
   height: 100%;
@@ -228,7 +229,7 @@ Results
 .result-info{
   padding: 15px;
   background: #424546;
-  max-height: 165px;
+  height: 100%;
  border-radius: 0 10px 10px 0;
 }
 .result-info h6{
@@ -252,7 +253,7 @@ Results
   .result-image img{border-radius: 10px 10px 0 0; width:100%;}
 }
 
-@media screen and (max-width:350px) {
+@media screen and (max-width:375px) {
   .result{width:237px;}
   .container{width:100%;}
   .progress{width:237px;}
@@ -269,4 +270,7 @@ Results
 }
 .review .btn{
   margin-top: 15px;
+}
+.img-fluid{
+  border-radius:18px;
 }

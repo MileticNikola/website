@@ -16,7 +16,7 @@
         <div class="col-xs-12 col-md-8 no-padding">
             <div class="result-info">
                 <h5><?php echo $review['title']?></h5>
-                <h6><?php echo $review['excerpt']?></h6>
+                <h6><?php echo substr($review['excerpt'],0,115).'...'?></h6>
             </div>
         </div>
     </div>

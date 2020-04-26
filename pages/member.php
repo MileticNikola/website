@@ -1,5 +1,7 @@
 <?php
-$user = addslashes($path[1]);
+if(isset($path[1])){
+    $user = addslashes($path[1]);
+}
 $sql = "SELECT * FROM `members`, `member_roles`, `member_social` WHERE `members`.`id` = member_social.id AND `members`.`role` = `member_roles`.`id` AND `username` = ?;";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$user]);
@@ -19,6 +21,7 @@ if ($stmt->rowCount() == 0) {
             </div>
         </div>
     </div>
+    ?>
     <?php
 
 }else{
@@ -118,7 +121,30 @@ if ($stmt->rowCount() == 0) {
                         echo "</table>";
                     }
 
-                    if ($f_settings_stmt->rowCount() == 0 && $a_settings_stmt->rowCount() == 0 && $c_settings_stmt->rowCount() == 0) {
+                    $v_settings_sql = "SELECT * FROM `member_valorant_settings` WHERE `id` = ?;";
+                    $v_settings_stmt = $pdo->prepare($v_settings_sql);
+                    $v_settings_stmt->execute([$result["id"]]);
+                    $v_settings_result = $v_settings_stmt->fetch();
+
+                    if ($v_settings_stmt->rowCount() != 0) {
+                        echo "<h4>Valorant Settings</h4>";
+                        echo "<table class='table table-dark'>";
+                        echo "<tr><td>Sensitivity</td><td>" . $v_settings_result["sensitivity"] . "</td></tr>";
+                        echo "<tr><td>DPI</td><td>" . $v_settings_result["dpi"] . "</td></tr>";
+                        echo "<tr><td>Resolution</td><td>" . $v_settings_result["resolution"] . "</td></tr>";
+                        echo "<tr><td>Walk</td><td>" . $v_settings_result["walk"] . "</td></tr>";    
+                        echo "<tr><td>Crouch</td><td>" . $v_settings_result["crouch"] . "</td></tr>";   
+                        echo "<tr><td>Jump</td><td>" . $v_settings_result["jump"] . "</td></tr>";    
+                        echo "<tr><td>Interact</td><td>" . $v_settings_result["interact"] . "</td></tr>";    
+                        echo "<tr><td>Ability 1</td><td>" . $v_settings_result["ability_1"] . "</td></tr>";
+                        echo "<tr><td>Ability 2</td><td>" . $v_settings_result["ability_2"] . "</td></tr>";
+                        echo "<tr><td>Ability 3</td><td>" . $v_settings_result["ability_3"] . "</td></tr>";   
+                        echo "<tr><td>Ultimate Ability</td><td>" . $v_settings_result["ability_ultimate"] . "</td></tr>";                 
+                        echo "</table>";
+                    }
+
+                    if ($f_settings_stmt->rowCount() == 0 && $a_settings_stmt->rowCount() == 0 &&
+                        $c_settings_stmt->rowCount() == 0 && $v_settings_stmt->rowCount() == 0) {
                         echo "<h4>Settings</h4>";
                         echo "<p>This user does not have any settings displayed.</p>";
                     }

@@ -16,32 +16,32 @@
     <meta name="designer" content="duplxey - https://duplxey.com/"/>
     <?php
     if(!empty($pageData)){
-        if($pageData['title']){
+        if(isset($pageData['title'])){
             ?>
             <title><?=$pageData['title']?></title>
             <?php
         }
-        if($pageData['meta']['description']){
+        if(isset($pageData['meta']['description'])){
             ?>
             <meta name="description" content="<?=$pageData['meta']['description']?>"/>
             <?php
         }
-        if($pageData['meta']['keywords']){
+        if(isset($pageData['meta']['keywords'])){
             ?>
             <meta name="keywords" content="<?=$pageData['meta']['keywords']?>"/>
             <?php
         }
-        if($pageData['og']['title']){
+        if(isset($pageData['og']['title'])){
             ?>
             <meta property="og:title" content="<?=$pageData['og']['title']?>"/>
             <?php
         }
-        if($pageData['og']['description']){
+        if(isset($pageData['og']['description'])){
             ?>
             <meta property="og:description" content="<?=$pageData['og']['description']?>"/>
             <?php
         }
-        if($pageData['og']['image']){
+        if(isset($pageData['og']['image'])){
             ?>
             <meta property="og:image" content="<?=$pageData['og']['image']?>"/>
             <?php

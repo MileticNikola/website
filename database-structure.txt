@@ -59,3 +59,18 @@ CREATE TABLE member_cs_settings(
     `viewmodel` VARCHAR(32) DEFAULT "N/A" NOT NULL,
     `cl_bob` VARCHAR(32) DEFAULT "N/A" NOT NULL
 );
+
+CREATE TABLE member_valorant_settings(
+    `id` INT PRIMARY KEY,
+    `sensitivity` VARCHAR(32) DEFAULT "N/A" NOT NULL,
+    `dpi` VARCHAR(32) DEFAULT "N/A" NOT NULL,
+    `resolution` VARCHAR(32) DEFAULT "N/A" NOT NULL,
+    `walk` VARCHAR(32) DEFAULT "N/A" NOT NULL,
+    `crouch` VARCHAR(32) DEFAULT "N/A" NOT NULL,
+    `jump` VARCHAR(32) DEFAULT "N/A" NOT NULL,
+    `interact` VARCHAR(32) DEFAULT "N/A" NOT NULL,
+    `ability_1` VARCHAR(32) DEFAULT "N/A" NOT NULL,
+    `ability_2` VARCHAR(32) DEFAULT "N/A" NOT NULL,
+    `ability_3` VARCHAR(32) DEFAULT "N/A" NOT NULL,
+    `ability_ultimate` VARCHAR(32) DEFAULT "N/A" NOT NULL,
+);

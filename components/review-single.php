@@ -16,7 +16,7 @@ $pageData['og']['image'] = "https://teamspectralis.com/img/thumbnail.png";
 <div class="section" style="background:url('/img/cover/cover2.png')center;background-size:cover;">
     <div class="container">
         <h2><?php echo $article['title']?></h2>
-        <p><?php echo $article['excerpt']?></p>
+        <p><?php echo $article['description']?></p>
     </div>
 </div>
 <div class="section">
@@ -24,7 +24,7 @@ $pageData['og']['image'] = "https://teamspectralis.com/img/thumbnail.png";
         <div class="review">
             <div class="row">
                 <div class="col-xs-12 col-md-4">
-                    <?
+                    <?php
                     if($article['images']){
                         foreach ($article['images'] as $image){
                             ?>
@@ -36,7 +36,7 @@ $pageData['og']['image'] = "https://teamspectralis.com/img/thumbnail.png";
                 </div>
                 <div class="col-xs-12 col-md-8">
                     <article>
-                        <?php echo $article['description']?>
+                        <?php echo $article['excerpt']?>
                         <div class="clearfix"></div>
                         <a href="/reviews" class="btn btn-primary">Back to review list</a>
                     </article>

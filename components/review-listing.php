@@ -16,13 +16,13 @@ $pageData['og']['image'] = "https://teamspectralis.com/img/thumbnail.png";
 <div class="section" style="background:url('/img/cover/cover2.png')center;background-size:cover;">
     <div class="container">
         <h2>Reviews</h2>
-        <p>Lets review stuff</p>
+        <p>Read reviews of our sponsor's products.</p>
     </div>
 </div>
 <div class="section">
     <div class="container">
         <div class="row">
-            <?
+            <?php
             if($reviewData){
                 $cc = 0;
                 foreach($reviewData as $review){
